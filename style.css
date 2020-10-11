@@ -146,6 +146,10 @@
     background-color: #FDDCC4;
 }
 
+.hero__image-class{
+    padding-top: 80px;
+}
+
 /* SECTION ABOUT  */
 
 .about{
@@ -380,16 +384,21 @@
 
 .help__content{
     display: flex;
-    flex-direction: row;
-    padding-top: 60px;
-    padding-left: 120px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-left: 60px;
 }
 
 .help__content-item{
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-right: 120px;
+}
+
+.help__content-item-very-left{
+    padding-left: 100px;
 }
 
 .help__content-item h4{
@@ -647,3 +656,144 @@
     height: 32px;
 }
 
+/*ADAPTIVE ADAPTIVE 768px 768px*/
+
+@media(max-width: 768px){
+
+    /*ADAPTIVE HEADER AND SECTION HERO 768px*/
+    .header{
+        position: absolute;
+        width: 708px;
+        height: 60px;
+        left: calc(50% - 708px/2);
+        top: 30px;
+    }
+
+    .hero__content{
+        display: inline-block;
+        padding-left: 154px;
+    }
+
+    .content-section__subtitle{
+        max-width: 500px;
+    }
+
+    .content-section__button{
+        margin-left: 126px;
+    }
+
+    /*ADAPTIVE ABOUT WRAPPER 768px*/
+
+    .wrapper{
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .about__title{
+        order: 1;
+    }
+
+    .about__subtitle{
+        order: 2;
+        width: 450px;
+    }
+
+    .about__image-wrapper{
+        order: 3;
+        padding-top: 440px;
+    }
+
+    .about__content{
+        position: absolute;
+        left: 60px;
+    }
+
+    /*PETS WRAPPER ADAPTIVE 768px*/
+    .pets__cards-item.pets__cards-item_hidden{
+        display: none;
+    }
+
+    .hero__image-class{
+        
+        display: flex;
+        margin-top: -70px;
+        margin-left: 50px;
+    }
+    /*DONATION WRAPPER ADAPTIVE 768px*/
+    
+    .donation{
+        display: flex;
+        align-items: center;
+        padding-left: 160px;
+    }
+
+    .donation__content-title{
+        order: 1;
+    }
+
+    .dontation__content-subtitle{
+        order: 2;
+    }
+
+    .donation__content-card{
+        order: 3;
+    }
+
+    .donation__content-paragraph{
+        order: 4;
+    }
+
+    .donation__image-wrapper{
+        padding-top: 60px;
+        order: 5;
+    }
+
+    /*FOOTER ADAPTIVE WRAPPER*/
+
+    .footer__content-contacts{
+        padding-left: 60px;
+    }
+
+    .footer__content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .footer__content-location{
+        padding-right: 0;
+        position: absolute;
+        left: 400px;
+    }
+
+    .footer__content-image{
+        padding-left: 200px;
+        padding-top: 65px;
+    }
+    /*HELP ADAPTIVE*/
+
+    .help__content{
+        
+    }
+
+    .help__content-item{
+        padding-right: 120px;
+        margin: 0;
+    }
+    .help__content-item-very-left{
+        padding-left: 0;
+    }
+
+    .help__content-item-pet{
+        margin-left: 34px;
+    }
+
+    .help__content-item-med{
+        margin-left: 20px;
+    }
+
+    .help__content-item-sleep{
+        margin-left: -60px;
+        padding-right: 0;
+    }
+}
